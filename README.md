@@ -10,13 +10,13 @@ Add to your `package.json` file:
 ```
 "dependencies": {
 "angular": "1.6.2",
-"ngui": "github:cervgon/ngui"
+"ngui": "github:AdventosCorp/ngui"
 }
 ```
 or 
 
 ```
-npm install github:cervgon/ngui --save
+npm install AdventosCorp/ngui --save
 ```
 
 #### Test
