@@ -1,0 +1,40 @@
+<div class="pie" ng-if="$ctrl.pieReady">
+    <div ng-if="$ctrl.data && !$ctrl.error" class="block">
+        <svg viewBox="0 0 280 200" class="chart">
+
+            <g ng-if="$ctrl.valuesl1">
+                <circle
+                        class="bgcircle"
+                        cx="140"
+                        cy="100"
+                        r="90"
+                        stroke-width="{{$ctrl.strokeWidth}}"></circle>
+                <circle ng-repeat="value in $ctrl.valuesl1"
+                        cx="140"
+                        cy="100"
+                        r="90"
+                        stroke="{{value.color}}"
+                        stroke-width="{{($ctrl.currentValue == $index) ? $ctrl.strokeWidth*2:$ctrl.strokeWidth}}"
+                        stroke-dasharray="{{value.dasharray[0]}} {{value.dasharray[1]}}"
+                        transform-origin="50% 50%"
+                        ng-style="{'transform':'rotate('+value.angle+'deg)','transition':'stroke-dasharray '+ $ctrl.time1 +'s linear','transition-delay':$index*$ctrl.time1+'s'}"
+                        ng-click="$ctrl.currentValue = $index"
+                ></circle>
+            </g>
+            <g ng-if="$ctrl.currentValue > -1">
+                <text x="140" y="125" text-anchor="middle" alignment-baseline="bottom">
+                    <tspan class="pieText" font-size="80" ng-bind="$ctrl.removeDecimal($ctrl.l1[$ctrl.currentValue])" letter-spacing="-5"></tspan>
+                    <tspan class="pieTextCent" font-size="10" dx="1" ng-bind="$ctrl.getDecimal($ctrl.l1[$ctrl.currentValue])"></tspan>
+                </text>
+                <text class="pieTextBottom" x="140" y="145" font-size="12" text-anchor="middle" alignment-baseline="bottom">{{$ctrl.reference}}</text>
+            </g>
+
+        </svg>
+        <ul class="pieLabels">
+            <li ng-repeat="data in $ctrl.data" ng-click="$ctrl.currentValue = $index" ng-class="{'current':$ctrl.currentValue == $index}" ng-if="($ctrl.data[$index].hasOwnProperty('label'))">
+                <svg class="middle inline" width="1em" height="1em"><circle cx=".5em" cy=".5em" r=".25em" stroke-width="0.15em" stroke="{{$ctrl.valuesl1[$index].color}}"></circle></svg>
+                <span class="default">{{data.label}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

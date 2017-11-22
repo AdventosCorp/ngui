@@ -1,19 +1,21 @@
-import main from '../../main.js';
+import angular from 'angular';
 import Template from './template.html';
 import Styles from './styles.css';
 
-export default main.component('hamburger', {
-    template: Template,
-    bindings: {
-        nguiOpen: '=',
-    },
-    controller: function() {
-        "ngInject";
-        var $ctrl = this;
-        $ctrl.toggle = function() {
-            $ctrl.nguiOpen = !$ctrl.nguiOpen;
+export default angular
+    .module('ngui.hamburger', [])
+    .component('hamburger', {
+        template: Template,
+        bindings: {
+            nguiModel: '=',
+            nguiOptions: '<'
+        },
+        controller: function() {
+            "ngInject";
+            var $ctrl = this;
+            $ctrl.toggle = function() {
+                $ctrl.nguiModel = !$ctrl.nguiModel;
+            }
         }
-        $ctrl.$onInit = function (){
-        }
-    }
-});
+    })
+    .name

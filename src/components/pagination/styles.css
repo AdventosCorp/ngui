@@ -1,19 +1,16 @@
 /* Pagination */
-.pagination{display: inline-block;}
-.pagination *{display: inline-block; float: left}
-.pagination li{margin-bottom:0.1em;}
-.pagination li.selected{color: #005e9d; font-weight: bold}
-.pagination li:first-child{border-radius: .3em 0 0 .3em}
-.pagination li:first-child:last-child{display: none}
-.pagination li:last-child{border-right-width:1px; border-radius: 0 .3em .3em 0}
-.pagination li a{padding:.572em .75em;}
-.pagination li a:hover{background-color: #eee}
-.pagination li.selected a:hover{background-color: #eee}
-.pagination .pages{padding:.572em .75em 0.55em 0}
-
-/* Pager */
-.pager{display: inline-block;}
-.pager li:first-child{float: left; margin-right: 0.25em}
-.pager li:last-child{float: right; margin-left: 0.25em}
-.pager li a{border-radius: .3em; border:1px solid #ccc;padding:.572em .75em; display: inline-block;}
-.pager li a:hover{background-color: #f2f2f2}
+pagination { font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif }
+pagination .pagination { padding: 0; display: inline-block }
+pagination .pagination *{ display: inline-block; float: left }
+pagination .pagination li{ margin-bottom:0.1em; overflow: hidden; cursor: pointer }
+pagination .pagination li.selected{ background-color: #f2f2f2; cursor: default }
+.night pagination .pagination li.selected{ background-color:#181818 }
+pagination .pagination li:first-child{ border-radius: .3em 0 0 .3em }
+pagination .pagination li:first-child:last-child{ display: none }
+pagination .pagination li:last-child{ border-right-width:1px; border-radius: 0 .3em .3em 0 }
+pagination .pagination li a{ padding:.572em .75em }
+pagination .pagination li a:hover{ background-color: #eee }
+.night pagination .pagination li a:hover{ background-color: #111 }
+pagination .pagination li.selected a:hover { background-color: #eee }
+.night pagination .pagination li.selected a:hover { background-color: #111 }
+pagination .pagination .pages{padding:.572em .75em 0.55em 0}

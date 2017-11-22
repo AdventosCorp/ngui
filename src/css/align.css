@@ -4,9 +4,11 @@
 .uppercase { text-transform: uppercase }
 .lowercase { text-transform: lowercase !important }
 .pointer { cursor: pointer }
+.default { cursor: default }
 .clear { clear: both }
 .floatRight { float: right }
 .floatLeft { float: left }
 *.textLeft { text-align: left !important }
 *.textRight { text-align: right !important }
 .absRight { position: absolute; right: 0; top: 0 }
+.middle { vertical-align: middle }

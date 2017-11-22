@@ -1,0 +1,9 @@
+<div class="radar" ng-if="$ctrl.radarReady">
+    <svg class="chart" viewBox="0 0 360 300">
+        <g ng-bind-html="$ctrl.poligon | unsafe"></g>
+        <g ng-bind-html="$ctrl.steps | unsafe"></g>
+        <g ng-bind-html="$ctrl.lines | unsafe"></g>
+        <g ng-bind-html="$ctrl.draws | unsafe"></g>
+        <g ng-bind-html="$ctrl.texts | unsafe"></g>
+    </svg>
+</div>

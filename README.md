@@ -2,7 +2,7 @@
 CSS and Angularjs components framework for developing your projects.
 
 
-## Instrutions
+## Installation
 
 ### NPM
 Add to your `package.json` file:
@@ -11,9 +11,8 @@ Add to your `package.json` file:
 "dependencies": {
 "angular": "1.6.2",
 "ngui": "github:AdventosCorp/ngui"
-}
 ```
-or 
+or
 
 ```
 npm install AdventosCorp/ngui --save
@@ -63,3 +62,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+Made with ♥ for the people of the internet
