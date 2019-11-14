@@ -58,3 +58,10 @@ typings/
 .env
 
 dist
+package-lock.json
+
+# mac
+*.DS_Store
+
+# VisualStudio Code
+*.vscode/

@@ -1,6 +1,6 @@
 import angular from 'angular';
 import Template from './template.html';
-import Styles from './styles.css';
+import Styles from './styles.scss';
 
 export default angular
     .module('ngui.dropdown', [])
@@ -18,7 +18,7 @@ export default angular
                 if ($ctrl.disabled)
                     return;
                 $ctrl.opened = true;
-                console.log("open");
+                //console.log("open");
             }
 
             $ctrl.onBlur = function() {
