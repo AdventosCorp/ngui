@@ -18,22 +18,7 @@ export default angular
             };
 
             Date.getDaysInMonth = function(year, month) {
-                return [
-                    31,
-                    (Date.isLeapYear(year)
-                        ? 29
-                        : 28),
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31
-                ][month];
+                return new Date(year, month + 1, 0).getDate();
             };
 
             Date.prototype.isLeapYear = function() {
@@ -158,23 +143,8 @@ export default angular
             }
 
             $ctrl.change_month = function(n) {
-                var m = $ctrl.visible_date.getMonth();
-                var y = $ctrl.visible_date.getFullYear();
-
-                m += n;
-
-                if (m > 11) {
-                    m = 0;
-                    y += 1;
-                }
-
-                if (m < 0) {
-                    m = 11;
-                    y -= 1;
-                }
-
-                $ctrl.visible_date.setMonth(m);
-                $ctrl.visible_date.setFullYear(y);
+                $ctrl.visible_date.setDate(1);
+                $ctrl.visible_date.setMonth($ctrl.visible_date.getMonth() + n);
             }
 
             $ctrl.update_selected_date = function() {

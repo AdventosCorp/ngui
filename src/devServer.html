@@ -303,12 +303,7 @@
                     <button>Bb</button>
                     <button>Cc</button>
                 </div>
-                <select style="width:150px">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </select>
+
                 <input type="file" class="file" id="someID" />
                 <label class="btn" for="someID">Choose a file..</label>
                 <div style="width:250px" class="inline-block">
@@ -319,6 +314,20 @@
                 </div>
             </div>
             <hr class="transparent">
+            
+            <div class="g1 gxm1-3 p05">
+                <select style="width:150px" ng-class="{ wrong: $ctrl.selectValue.length === 0}" ng-model="$ctrl.selectValue">
+                    <option value=""></option>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+                <p ng-if="$ctrl.selectValue.length === 0" class="msg msg-red">This field is required</p>
+            </div>          
+
+            <hr class="transparent">
+
             <div class="g1 gxm3-4">
                 <div class="g1 gxm1-3 p05">
                     <label>Username <span class="xs">(some message here)</span></label>
