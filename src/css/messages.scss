@@ -152,6 +152,11 @@ textarea.ok:focus {
   */
 }
 
+select.wrong option {
+  background-color: transparent;
+  color: #333;
+}  
+
 input {
   &[type="text"].wrong, &[type="email"].wrong, &[type="number"].wrong, &[type="file"].wrong {
     background-color: #f6eaea;
@@ -218,6 +223,10 @@ textarea.wrong:focus, nguix-datepicker.wrong .datepicker-input {
     border-color: #1a0a0a;
     color: #da5a5a;
   }
+  select.wrong option {
+    background-color: transparent;
+    color: #ccc;
+  }  
   input {
     &[type="text"].wrong, &[type="email"].wrong, &[type="number"].wrong, &[type="file"].wrong {
       background-color: #471f1f;
