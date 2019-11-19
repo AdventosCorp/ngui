@@ -225,7 +225,7 @@ textarea.wrong:focus, nguix-datepicker.wrong .datepicker-input {
   }
   select.wrong option {
     background-color: transparent;
-    color: #666;
+    color: #ccc;
   }  
   input {
     &[type="text"].wrong, &[type="email"].wrong, &[type="number"].wrong, &[type="file"].wrong {
