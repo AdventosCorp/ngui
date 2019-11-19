@@ -219,6 +219,8 @@ App.component('app', {
         }
         $ctrl.lineData = lineData;
 
+        $ctrl.selectValue = 'volvo';
+
         return;
 
 
